@@ -1,0 +1,78 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* EazyEd palette — light values; .dark overrides via CSS vars below */
+  --color-EazyEd-primary: #2563eb;
+  --color-EazyEd-primary-soft: #dbe1ff;
+  --color-EazyEd-on-primary: #ffffff;
+  --color-EazyEd-surface: #faf8ff;
+  --color-EazyEd-surface-2: #f2f3ff;
+  --color-EazyEd-surface-3: #eaedff;
+  --color-EazyEd-surface-4: #e2e7ff;
+  --color-EazyEd-border: #c3c6d7;
+  --color-EazyEd-text: #131b2e;
+  --color-EazyEd-text-muted: #434655;
+  --color-EazyEd-secondary: #505f76;
+  --color-EazyEd-accent: #6366f1;
+  --color-EazyEd-success: #16a34a;
+  --color-EazyEd-danger: #ba1a1a;
+  --color-EazyEd-warning: #d97706;
+
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: swap;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+}
+
+.dark {
+  --color-EazyEd-primary: #6f8dff;
+  --color-EazyEd-primary-soft: #1e2a5e;
+  --color-EazyEd-on-primary: #00174b;
+  --color-EazyEd-surface: #0f1424;
+  --color-EazyEd-surface-2: #151b30;
+  --color-EazyEd-surface-3: #1b2240;
+  --color-EazyEd-surface-4: #232b52;
+  --color-EazyEd-border: #2c3454;
+  --color-EazyEd-text: #eef0ff;
+  --color-EazyEd-text-muted: #aab0c8;
+  --color-EazyEd-secondary: #b7c8e1;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    background-color: var(--color-EazyEd-surface);
+    color: var(--color-EazyEd-text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, var(--color-EazyEd-surface) 70%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
