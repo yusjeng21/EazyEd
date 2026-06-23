@@ -210,16 +210,16 @@ export default function Contact() {
         <aside className="bg-EazyEd-surface border border-EazyEd-border rounded-2xl p-6 h-fit space-y-5">
           <h2 className="text-lg font-bold">Get in touch</h2>
           {[
-            { icon: "call", label: "Phone", value: "+1 (555) 010-2345" },
+            { icon: "call", label: "Phone", value: "+220 652 5719" },
             {
               icon: "mail",
               label: "Support email",
-              value: "support@EazyEd.edu",
+              value: "support@eazyed.edu",
             },
             {
               icon: "location_on",
-              label: "Campus office",
-              value: "Block C, Room 214\nMain Campus",
+              label: "Faraba Campus office",
+              value: "SITC, Admin Block\nOffice 09",
             },
             {
               icon: "schedule",
