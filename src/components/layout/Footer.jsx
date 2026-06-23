@@ -39,10 +39,10 @@ export default function Footer() {
           </p>
           <ul className="space-y-2 text-sm text-EazyEd-text-muted">
             <li className="flex items-center gap-2">
-              <Icon name="call" size={18} /> +220 123 4567
+              <Icon name="call" size={18} /> +220 652 5719
             </li>
             <li className="flex items-center gap-2">
-              <Icon name="mail" size={18} /> support@EazyEd.edu
+              <Icon name="mail" size={18} /> support@eazyed.edu
             </li>
             <li className="flex items-center gap-2">
               <Icon name="location_on" size={18} /> UTG Campus, Faraba
