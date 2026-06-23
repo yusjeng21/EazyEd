@@ -1,4 +1,4 @@
-<img width="412" height="4346" alt="Tutorials_mobile" src="https://github.com/user-attachments/assets/652f85aa-cccd-4d1f-b272-aba824a256e6" /><img width="1920" height="3068" alt="Tutorials_page" src="https://github.com/user-attachments/assets/7afc27d0-67c6-4ecb-a02e-b5477619db69" /><img width="412" height="3298" alt="Resources_mobile" src="https://github.com/user-attachments/assets/2f616254-4c80-40a8-83ca-170dd40e7d0f" /><img width="1920" height="1048" alt="Screenshot from 2026-06-22 03-32-45" src="https://github.com/user-attachments/assets/93769606-828e-4559-8ed3-05b06888cc19" /># EazyEd
+# EazyEd
 
 A student-focused academic resource platform designed to help university students access study materials, tutorials, announcements, and study tips in one place.
 
@@ -17,16 +17,21 @@ EazyEd is a frontend e-learning platform developed to solve real student workflo
 ## Preview
 
 <img width="1920" height="2541" alt="Home_page" src="https://github.com/user-attachments/assets/f0d5fa00-9787-4cf2-a38f-d4a0edf1846e" />
-<img width="1920" height="2256" alt="Resources_page" src="https://github.com/user-attachments/assets/3063b1b9-c26b-414d-8d97-b0f8cfb443a9" />
+
+<img width="412" height="3298" alt="Resources_mobile" src="https://github.com/user-attachments/assets/6a36bf18-5858-483b-b9fa-f3ed0cb46130" />
+
 <img width="1920" height="3068" alt="Tutorials_page" src="https://github.com/user-attachments/assets/97f47a62-b5f4-495f-bb0b-5f93d833b237" />
 <img width="1920" height="961" alt="Tutorials_Video_Modal" src="https://github.com/user-attachments/assets/8082881d-8d3e-4a65-862a-a01f33e489f3" />
-<img width="1920" height="2299" alt="Announcements_page" src="https://github.com/user-attachments/assets/d7f78485-473c-4ace-b08c-41045664d03c" />
-<img width="1920" height="1572" alt="Study-Tips_page" src="https://github.com/user-attachments/assets/bca2de38-1cd2-4978-9a93-fcac2d77baf6" />
-<img width="1920" height="1781" alt="Contact_page" src="https://github.com/user-attachments/assets/05e3120c-348e-4f96-8ed4-9d32437ffc6b" />
-<img width="1920" height="1379" alt="Bookmarks_page" src="https://github.com/user-attachments/assets/019e32b4-4ea9-495f-adb0-a5d5046463b4" />
 
-<img width="412" height="4207" alt="Home_mobile" src="https://github.com/user-attachments/assets/b6cd2fac-7a7d-4d9f-9744-d40ffbc2aa27" /> <img width="412" height="3298" alt="Resources_mobile" src="https://github.com/user-attachments/assets/6a36bf18-5858-483b-b9fa-f3ed0cb46130" /> <img width="412" height="4346" alt="Tutorials_mobile" src="https://github.com/user-attachments/assets/6a8699a5-3b5a-492b-a1b1-6117462b8c13" /> <img width="412" height="2784" alt="Announcements_mobile" src="https://github.com/user-attachments/assets/cc17172f-e21d-40c1-b0d8-d7cef80f1e91" />
-<img width="412" height="2692" alt="Study-Tips_mobile" src="https://github.com/user-attachments/assets/11a18d24-700b-4574-8458-ea9537ff6547" /> <img width="414" height="894" alt="Announcements_Modal" src="https://github.com/user-attachments/assets/9bcf5cc9-ebc9-4525-8013-2e90a006e04a" /> <img width="412" height="2690" alt="Contact_mobile" src="https://github.com/user-attachments/assets/96229ef8-c306-4b3b-970a-9e253f5a79ca" /> <img width="412" height="2346" alt="Bookmarks_Mobile menu" src="https://github.com/user-attachments/assets/89f8108d-ffd6-43f1-88ea-f110b642ae8c" />
+<img width="412" height="2784" alt="Announcements_mobile" src="https://github.com/user-attachments/assets/cc17172f-e21d-40c1-b0d8-d7cef80f1e91" />
+<img width="414" height="894" alt="Announcements_Modal" src="https://github.com/user-attachments/assets/9bcf5cc9-ebc9-4525-8013-2e90a006e04a" />
+
+<img width="1920" height="1572" alt="Study-Tips_page" src="https://github.com/user-attachments/assets/bca2de38-1cd2-4978-9a93-fcac2d77baf6" />
+
+<img width="412" height="2690" alt="Contact_mobile" src="https://github.com/user-attachments/assets/96229ef8-c306-4b3b-970a-9e253f5a79ca" />
+
+<img width="1920" height="1379" alt="Bookmarks_page" src="https://github.com/user-attachments/assets/019e32b4-4ea9-495f-adb0-a5d5046463b4" />
+<img width="412" height="2346" alt="Bookmarks_Mobile menu" src="https://github.com/user-attachments/assets/89f8108d-ffd6-43f1-88ea-f110b642ae8c" />
 
 ---
 
