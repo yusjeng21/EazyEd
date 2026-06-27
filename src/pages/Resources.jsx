@@ -23,13 +23,11 @@ const courses = [
   ...Array.from(new Set(resources.map((r) => r.course))),
 ];
 
-// Define the helper function OUTSIDE the component so it isn't recreated on every render
+// Helper for pagination ellipsis
 const getPaginationRange = (currentPage, totalPages) => {
-  const delta = 2; // Number of pages to show around the current page
+  const delta = 2;
   const range = [];
-
   for (let i = 1; i <= totalPages; i++) {
-    // Always show first, last, and pages around current
     if (
       i === 1 ||
       i === totalPages ||
@@ -49,44 +47,38 @@ export default function Resources() {
   const [query, setQuery] = useState(
     () => localStorage.getItem("resources-query") || "",
   );
-
   const [school, setSchool] = useState(
     () => localStorage.getItem("resources-school") || "All Schools",
   );
-
   const [course, setCourse] = useState(
     () => localStorage.getItem("resources-course") || "All Courses",
   );
-
   const [sortDesc, setSortDesc] = useState(() =>
     JSON.parse(localStorage.getItem("resources-sort") ?? "true"),
   );
-
   const [currentPage, setCurrentPage] = useState(
     () => Number(localStorage.getItem("resources-page")) || 1,
   );
   const { isBookmarked, toggleBookmark } = useBookmarks();
 
+  // Persist filters to localStorage
   useEffect(() => {
     localStorage.setItem("resources-query", query);
   }, [query]);
-
   useEffect(() => {
     localStorage.setItem("resources-school", school);
   }, [school]);
-
   useEffect(() => {
     localStorage.setItem("resources-course", course);
   }, [course]);
-
   useEffect(() => {
     localStorage.setItem("resources-sort", JSON.stringify(sortDesc));
   }, [sortDesc]);
-
   useEffect(() => {
     localStorage.setItem("resources-page", currentPage);
   }, [currentPage]);
 
+  // Filter and sort logic
   const filtered = useMemo(() => {
     let list = resources.filter((r) => {
       const q = query.trim().toLowerCase();
@@ -98,51 +90,42 @@ export default function Resources() {
       const matchC = course === "All Courses" || r.course === course;
       return matchQ && matchS && matchC;
     });
-
     list.sort((a, b) =>
       sortDesc ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date),
     );
     return list;
   }, [query, school, course, sortDesc]);
 
-  // Handle downloads
+  // Download handler
   const handleDownload = (r) => {
-    toast.success("Download started", { description: r.title });
-
-    // Size parsing
-    const sizeMatch = r.size.match(/([\d.]+)\s*(MB|KB)/i);
-    let sizeInMB = 0;
-
-    if (sizeMatch) {
-      const value = parseFloat(sizeMatch[1]);
-      const unit = sizeMatch[2].toUpperCase();
-      sizeInMB = unit === "KB" ? value / 1024 : value;
+    // Check if the resource has a fileUrl
+    if (!r.fileUrl) {
+      toast.error("File not available for this resource");
+      return;
     }
 
-    // Map file size thresholds to your timing rules
-    let delay = 2000; // (< 1MB) default
-    if (sizeInMB >= 8) delay = 7000;
-    else if (sizeInMB >= 6) delay = 6000;
-    else if (sizeInMB >= 3) delay = 5000;
-    else if (sizeInMB >= 2) delay = 4000;
-    else if (sizeInMB >= 1) delay = 3000;
+    toast.success("Download started", { description: r.title });
 
-    // Trigger completion message
-    setTimeout(() => {
-      toast.success("Download finished", {
-        description: `${r.title} saved successfully.`,
-      });
-    }, delay);
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = r.fileUrl;
+    // const fileName = r.fileUrl.split("/").pop();
+    const fileName = r.title.split("/").pop();
+    link.download = fileName;
+    // link.download = r.fileUrl.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
-  // Pagination Logic
+  // Pagination
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const paginatedList = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filtered.slice(start, start + ITEMS_PER_PAGE);
   }, [filtered, currentPage, ITEMS_PER_PAGE]);
 
-  // Request Form States
+  // Request Form
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -152,20 +135,16 @@ export default function Resources() {
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
 
-  // Validation Logic
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = "Please enter your name.";
-
     if (!form.email.trim()) {
       e.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       e.email = "Please enter a valid email address.";
     }
-
     if (!form.course.trim()) e.course = "Course code is required.";
     if (!form.details.trim()) e.details = "Don't forget your request details.";
-
     return e;
   };
 
@@ -173,12 +152,10 @@ export default function Resources() {
     e.preventDefault();
     const v = validate();
     setErrors(v);
-
     if (Object.keys(v).length) {
       setSuccess(false);
       return;
     }
-
     setSuccess(true);
     toast.success("Resource request submitted");
     setForm({ name: "", email: "", course: "", details: "" });
@@ -197,8 +174,8 @@ export default function Resources() {
         : "border-EazyEd-border focus:border-EazyEd-primary"
     }`;
 
+  // Scroll to top on filter/page change
   const isInitialMount = useRef(true);
-
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
@@ -220,6 +197,7 @@ export default function Resources() {
       <p className="text-EazyEd-text-muted mb-8">
         Browse lecture notes, slides and study guides across schools.
       </p>
+
       {/* Filters Toolbar */}
       <div className="bg-EazyEd-surface border border-EazyEd-border rounded-2xl p-4 mb-6 flex flex-col md:flex-row gap-3">
         <div className="flex items-center gap-2 grow bg-EazyEd-surface-2 rounded-lg px-3 border border-transparent focus-within:border-EazyEd-primary transition">
@@ -234,8 +212,6 @@ export default function Resources() {
             placeholder="Search resources or courses…"
             className="bg-transparent border-none outline-none py-2.5 w-full text-EazyEd-text placeholder:text-EazyEd-text-muted"
           />
-
-          {/* Clear Button */}
           {query && (
             <button
               onClick={() => {
@@ -277,6 +253,7 @@ export default function Resources() {
           {sortDesc ? "Newest" : "Oldest"}
         </button>
       </div>
+
       {/* Grid Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {paginatedList.map((r) => {
@@ -311,6 +288,7 @@ export default function Resources() {
                   {r.date} · {r.size}
                 </span>
                 <button
+                  download
                   onClick={() => handleDownload(r)}
                   className="px-3 py-1.5 rounded-lg bg-EazyEd-primary text-white text-xs font-medium hover:brightness-110 flex items-center gap-1 cursor-pointer">
                   <Icon name="download" size={14} /> Download
@@ -325,12 +303,12 @@ export default function Resources() {
           </div>
         )}
       </div>
+
       {/* Pagination Component */}
       {totalPages > 1 && (
         <div className="mt-12 w-full flex justify-center">
           <Pagination className="w-full max-w-md md:max-w-none">
             <PaginationContent className="flex flex-wrap justify-between items-center w-full md:flex-nowrap md:justify-center gap-y-4 md:gap-y-0 md:gap-x-2">
-              {/* 1. Previous Button: Bottom-left on mobile, Left on desktop */}
               <PaginationItem className="order-2 w-[48%] md:w-auto md:order-1">
                 <PaginationPrevious
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
@@ -340,7 +318,6 @@ export default function Resources() {
                 />
               </PaginationItem>
 
-              {/* 2. Page Numbers: Full-width top row on mobile, Center on desktop */}
               <div className="order-1 w-full flex justify-center items-center gap-1 md:w-auto md:order-2">
                 {getPaginationRange(currentPage, totalPages).map(
                   (page, index) => (
@@ -362,7 +339,6 @@ export default function Resources() {
                 )}
               </div>
 
-              {/* 3. Next Button: Bottom-right on mobile, Right on desktop */}
               <PaginationItem className="order-3 w-[48%] md:w-auto md:order-3">
                 <PaginationNext
                   onClick={() =>
@@ -378,7 +354,8 @@ export default function Resources() {
             </PaginationContent>
           </Pagination>
         </div>
-      )}{" "}
+      )}
+
       {/* Request Form Section */}
       <div className="mt-16 bg-EazyEd-surface border border-EazyEd-border rounded-2xl p-6 md:p-8">
         <h2 className="text-2xl font-bold mb-1">
@@ -393,7 +370,6 @@ export default function Resources() {
           onSubmit={submitRequest}
           noValidate
           className="grid md:grid-cols-2 gap-4">
-          {/* Name Field */}
           <div className="md:col-span-1">
             <label className="block text-sm font-medium mb-1">Name</label>
             <input
@@ -407,7 +383,6 @@ export default function Resources() {
             )}
           </div>
 
-          {/* Email Field */}
           <div className="md:col-span-1">
             <label className="block text-sm font-medium mb-1">Email</label>
             <input
@@ -421,7 +396,6 @@ export default function Resources() {
             )}
           </div>
 
-          {/* Course Field */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium mb-1">
               Course Code
@@ -437,7 +411,6 @@ export default function Resources() {
             )}
           </div>
 
-          {/* Details Field */}
           <div className="md:col-span-2">
             <label className="block text-sm font-medium mb-1">
               Request Details
@@ -456,7 +429,6 @@ export default function Resources() {
             )}
           </div>
 
-          {/* Success Banner Notice */}
           {success && (
             <div className="md:col-span-2 text-sm px-3 py-2 rounded-lg bg-EazyEd-success/10 text-EazyEd-success">
               Request submitted — we'll reach out shortly.

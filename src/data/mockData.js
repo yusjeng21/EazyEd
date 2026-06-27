@@ -9,7 +9,7 @@ export const resources = [
       "Past exam paper covering double-entry bookkeeping, trial balances, and financial statements.",
     type: "PDF",
     size: "1.8 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r2",
@@ -21,7 +21,7 @@ export const resources = [
       "Lecture notes on consolidated financial statements and minority interest calculations.",
     type: "PDF",
     size: "3.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r3",
@@ -32,7 +32,7 @@ export const resources = [
     description: "Practice questions focusing on cellular reproduction cycles.",
     type: "DOCX",
     size: "500 KB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r4",
@@ -44,7 +44,7 @@ export const resources = [
       "Seminar slides detailing the legal frameworks of negotiable instruments.",
     type: "PDF",
     size: "2.5 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r5",
@@ -56,7 +56,7 @@ export const resources = [
       "Practice problems for nucleophilic substitutions and eliminations.",
     type: "PDF",
     size: "1.2 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r6",
@@ -68,7 +68,7 @@ export const resources = [
       "Reading materials and case briefs on foundational constitutional principles.",
     type: "PDF",
     size: "4.0 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r7",
@@ -80,7 +80,7 @@ export const resources = [
       "Lecture notes covering private international law and cross-border disputes.",
     type: "DOCX",
     size: "800 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r8",
@@ -92,7 +92,7 @@ export const resources = [
       "Lab exercises for configuring OSPF and EIGRP in Cisco Packet Tracer.",
     type: "ZIP",
     size: "5.5 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r9",
@@ -104,7 +104,7 @@ export const resources = [
       "Starter code and practice questions for building interactive web UI components.",
     type: "ZIP",
     size: "12.0 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r10",
@@ -116,7 +116,7 @@ export const resources = [
       "Assignment instructions for implementing threads and locks in Java.",
     type: "PDF",
     size: "600 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r11",
@@ -128,7 +128,7 @@ export const resources = [
       "Lecture slides on designing scalable cloud environments using Amazon Web Services.",
     type: "PDF",
     size: "4.8 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r12",
@@ -140,7 +140,7 @@ export const resources = [
       "Official template for formatting the final senior project dissertation.",
     type: "DOCX",
     size: "1.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r13",
@@ -152,7 +152,7 @@ export const resources = [
       "Quick reference guide for binomial, normal, and Poisson distributions.",
     type: "PDF",
     size: "350 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r14",
@@ -164,7 +164,7 @@ export const resources = [
       "Mock exam covering derivatives and optimization in a business context.",
     type: "PDF",
     size: "1.5 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r15",
@@ -176,7 +176,7 @@ export const resources = [
       "Detailed lecture notes on budget constraints and indifference curves.",
     type: "PDF",
     size: "2.2 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r16",
@@ -187,7 +187,7 @@ export const resources = [
     description: "Practice problems for graphical and simplex methods.",
     type: "DOCX",
     size: "900 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r17",
@@ -199,7 +199,7 @@ export const resources = [
       "A list of past essay prompts discussing pre-colonial and colonial education in Africa.",
     type: "PDF",
     size: "400 KB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r18",
@@ -211,7 +211,7 @@ export const resources = [
       "Comprehensive guide to APA referencing and maintaining academic integrity.",
     type: "PDF",
     size: "1.3 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r19",
@@ -223,7 +223,7 @@ export const resources = [
       "Standardized templates for structuring daily instructional plans.",
     type: "DOCX",
     size: "150 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r20",
@@ -235,7 +235,7 @@ export const resources = [
       "Group discussion materials focusing on conflict resolution in schools.",
     type: "PDF",
     size: "2.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r21",
@@ -247,7 +247,7 @@ export const resources = [
       "Lecture materials on accommodating students with varied learning needs.",
     type: "PDF",
     size: "3.0 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r22",
@@ -259,7 +259,7 @@ export const resources = [
       "A concise review of the fundamental principles underlying equitable remedies.",
     type: "PDF",
     size: "600 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r23",
@@ -271,7 +271,7 @@ export const resources = [
       "End-of-semester revision notes on the literal, golden, and mischief rules.",
     type: "DOCX",
     size: "700 KB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r24",
@@ -282,7 +282,7 @@ export const resources = [
     description: "Multiple-choice practice quiz on atmospheric circulation.",
     type: "PDF",
     size: "850 KB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r25",
@@ -294,7 +294,7 @@ export const resources = [
       "Lecture slides detailing structural adjustment programs in West Africa.",
     type: "PDF",
     size: "4.2 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r26",
@@ -306,7 +306,7 @@ export const resources = [
       "Beginner-friendly lecture notes on basic computer components.",
     type: "PDF",
     size: "1.8 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r27",
@@ -318,7 +318,7 @@ export const resources = [
       "Practice problems for designing algorithms before writing code.",
     type: "PDF",
     size: "2.4 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r28",
@@ -330,7 +330,7 @@ export const resources = [
       "Real-world scenarios for analyzing data privacy and corporate responsibility.",
     type: "DOCX",
     size: "450 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r29",
@@ -341,7 +341,7 @@ export const resources = [
     description: "Past exam questions covering RISC vs CISC and pipelining.",
     type: "PDF",
     size: "1.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r30",
@@ -352,7 +352,7 @@ export const resources = [
     description: "Lab materials for designing normalized databases.",
     type: "ZIP",
     size: "3.5 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r31",
@@ -364,7 +364,7 @@ export const resources = [
       "Lecture slides comparing modern software development life cycles.",
     type: "PDF",
     size: "5.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r32",
@@ -375,7 +375,7 @@ export const resources = [
     description: "Detailed notes on designing service-oriented applications.",
     type: "PDF",
     size: "2.9 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r33",
@@ -386,7 +386,7 @@ export const resources = [
     description: "Sample documentation used for developing a corporate BCP.",
     type: "DOCX",
     size: "1.2 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r34",
@@ -397,7 +397,7 @@ export const resources = [
     description: "Lecture materials on middleware, APIs, and message brokers.",
     type: "PDF",
     size: "3.8 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r35",
@@ -409,7 +409,7 @@ export const resources = [
       "Quiz reviewing legal procedures for handling compromised systems.",
     type: "DOCX",
     size: "300 KB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r36",
@@ -421,7 +421,7 @@ export const resources = [
       "Tutorial and reference sheet for Business Process Model and Notation.",
     type: "PDF",
     size: "2.7 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r37",
@@ -433,7 +433,7 @@ export const resources = [
       "Lecture notes differentiating key Islamic financing contracts.",
     type: "PDF",
     size: "1.9 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r38",
@@ -445,7 +445,7 @@ export const resources = [
       "Exam review sheet covering agenda-setting and framing theories.",
     type: "PDF",
     size: "800 KB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r39",
@@ -457,7 +457,7 @@ export const resources = [
       "Short guide on framing, b-roll, and audio balancing for digital stories.",
     type: "PDF",
     size: "4.5 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r40",
@@ -469,7 +469,7 @@ export const resources = [
       "Practice questions testing knowledge on libel and journalistic privilege.",
     type: "DOCX",
     size: "400 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r41",
@@ -481,7 +481,7 @@ export const resources = [
       "Lecture slides on open-source intelligence gathering and verification.",
     type: "PDF",
     size: "6.2 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r42",
@@ -493,7 +493,7 @@ export const resources = [
       "Compilation of past exam questions analyzing evidentiary standards.",
     type: "PDF",
     size: "1.4 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r43",
@@ -505,7 +505,7 @@ export const resources = [
       "Study guide mapping out the elements required to establish negligence.",
     type: "PDF",
     size: "950 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r44",
@@ -517,7 +517,7 @@ export const resources = [
       "Lecture slides detailing functional, matrix, and flat corporate structures.",
     type: "PDF",
     size: "3.3 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r45",
@@ -528,7 +528,7 @@ export const resources = [
     description: "Framework worksheets for strategic environmental scanning.",
     type: "DOCX",
     size: "1.0 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r46",
@@ -540,7 +540,7 @@ export const resources = [
       "Grading rubric and brief for the final semester marketing project.",
     type: "PDF",
     size: "500 KB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r47",
@@ -552,7 +552,7 @@ export const resources = [
       "Complex problem sets focused on formal proofs of convergence.",
     type: "PDF",
     size: "2.6 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r48",
@@ -564,7 +564,7 @@ export const resources = [
       "Introduction to disease tracking, incidence, and prevalence rates.",
     type: "PDF",
     size: "3.7 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r49",
@@ -576,7 +576,7 @@ export const resources = [
       "Practice questions covering projectile motion and Newton's laws.",
     type: "PDF",
     size: "1.6 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r50",
@@ -588,7 +588,7 @@ export const resources = [
       "Assigned readings discussing the sociological impacts of rapid urban growth.",
     type: "PDF",
     size: "4.1 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r51",
@@ -600,7 +600,7 @@ export const resources = [
       "Detailed lecture notes comparing AM, FM, and digital modulation schemes.",
     type: "PDF",
     size: "5.3 MB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
   {
     id: "r52",
@@ -612,7 +612,7 @@ export const resources = [
       "Past final exam focusing on ODEs and Laplace transforms in engineering.",
     type: "PDF",
     size: "2.0 MB",
-    url: "#",
+    fileUrl: "/resources/resource 1.docx",
   },
   {
     id: "r53",
@@ -624,7 +624,7 @@ export const resources = [
       "Instructions and simulation parameters for designing microstrip antennas.",
     type: "ZIP",
     size: "8.4 MB",
-    url: "#",
+    fileUrl: "/resources/resource 2.pdf",
   },
   {
     id: "r54",
@@ -636,7 +636,7 @@ export const resources = [
       "End-of-semester quiz covering the shift from LTE to 5G core networks.",
     type: "DOCX",
     size: "650 KB",
-    url: "#",
+    fileUrl: "/resources/resource 3.pptx",
   },
 ];
 
@@ -1038,6 +1038,7 @@ export const announcements = [
     body: "The Registrar is currently compiling the final lecture timetable for the upcoming semester. We ask all department reps to submit their classroom availability forms by the end of the day. \n\nOnce the draft is submitted, it will undergo a final review process to minimize scheduling conflicts for students taking cross-listed courses. We are paying special attention to ensuring that students in combined degree programs (such as those in Law and Management) do not have overlapping lecture times. We thank you for your patience as we finalize these arrangements to ensure a smooth transition into the next semester. Further notifications will be sent out as soon as the final timetable is approved and published on the portal.",
   },
 ];
+
 export const stats = {
   resources: 248,
   tutorials: 96,
